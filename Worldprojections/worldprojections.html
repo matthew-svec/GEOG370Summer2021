@@ -9,25 +9,53 @@
     <h1>In this project I learned how to display images in different projections</h1>
     
     <h2 style="color:red">Describe in your own words how you displayed the map in different projections using QGIS</h2>
-    <p>You can write a paragraph here</p>
+    <p>I opened a country basemap vector file in QGIS. I then installed the plugin Indicatrix Mapper, which plots cirlces on a map that display the distortion of the projection by varying in shape and size. I changed projections by selecting the ESRI tab in the bottom right corner and entering the ESPG code corresponding to the desired projection. After generating the map, I moved to map composer and formatted the map, then exporting it as a png. </p>
     
     <h2>WGS84 Projection</h2>
-    <h3>Some observations</h3>
+    <h3>Overall country shapes preserved. Poles are heavily distorted, Antarctica and Greenland are larger than in reality, while countries in the center of the map are smaller.</h3>
     <a href=".//maps/4326.png">
     <img src=".//maps/4326.png" alt="WGS84" width='500px'>
     </a>
     <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
-    <a href=".//maps/54043.png">
-    <img src=".//maps/54043.png" alt="Aitoff" width='500px'>
-    </a>
-    <h2>Aitoff Projection</h2>
-    <h3>Some observations</h3>
+    <h3>Variation in size is lesser than in the WGS84. However, latitude lines curve outward rather than in, which is counterintuitive for a sphere or ellipsoid. </h3>
     <a href="./maps/4326.png">
     <img src=".//maps/54043.png" alt="wattt" width='500px'>
     </a>
-    <h2 style="color:red">Now, you should <u>add the following projections on your own:</u></h2>
-    <h3>EPSG: 3857, 53018, 54034, 54027, 102016, and two additional projections that you choose.</h3>
+    <h2>Pseudo Mercator Projection</h2>
+    <h3>Easily displayable and readable on a rectangular plane. However, north and south are much larger than center countries. Greenland is the size of Africa.</h3>
+    <a href="./maps/3857 - Pseudo Mercator.png">
+    <img src="./maps/3857 - Pseudo Mercator.png" alt="3857" width='500px'>
+    </a>    
+    <h2>Sphere Winkel I Projection</h2>
+    <h3>Size is comparable for most of the middle of the Earth, only becoming larger at the outermost latitudes. The curvature of the projection is more digestable than Aitoff.</h3>
+    <a href="./maps/53018 - Sphere_Winkel_I.png">
+    <img src="./maps/53018 - Sphere_Winkel_I.png" alt="53018" width='500px'>
+    </a>    
+    <h2>Sinusoidal Projection</h2>
+    <h3>Africa and Europe appear relatively undistorted. However, Asia, North America, South America, and Australia appear curved. Sizes are comparable between low and high latitudes. </h3>
+    <a href="./maps/54008 - World, Sinusoidal.png">
+    <img src="./maps/54008 - World, Sinusoidal.png" alt="wattt" width='500px'>
+    </a>    
+    <h2>Equidistant Conic Projection</h2>
+    <h3>For most of the habitable world, distortion is comparable. Only Antarctica is severely distorted. The top-down perspective is disorienting.</h3>
+    <a href="./maps/54027 - World_Equidistant_Conic.png">
+    <img src="./maps/54027 - World_Equidistant_Conic.png" alt="wattt" width='500px'>
+    </a>    
+    <h2>Cassini Projection</h2>
+    <h3>Other than Afirca, nearly incomprehensible. The very center of the map displays circles with very similar sizes while drastically changing size as the edges of the map are approached.</h3>
+    <a href="./maps/54028 - World_Cassini.png">
+    <img src="./maps/54028 - World_Cassini.png" alt="wattt" width='500px'>
+    </a>    
+    <h2>Cylindrical Equidistant Projection</h2>
+    <h3>Rectangular and easy to read plane, relatively equal sphere sizes, except poles seem squished. </h3>
+    <a href="./maps/54034 - World_Cylindrical_Equal_Area.png">
+    <img src="./maps/54034 - World_Cylindrical_Equal_Area.png" alt="wattt" width='500px'>
+    </a>    
+    <h2>North Pole Azimuthal Projection<h2>
+    <h3>Antarcica wraps around the Earth. Other than Antarctica, most countries have accurate comparative sizes. However, they're all too small to distinguish well.</h3>
+    <a href="./maps/102016 - North_Pole_Azimuthal_Equidistant.png">
+    <img src="./maps/102016 - North_Pole_Azimuthal_Equidistant.png" alt="wattt" width='500px'>
+    </a>
     <p></p>
     <h2>Data used for this project</h2>
     <a href="https://www.naturalearthdata.com/http//www.naturalearthdata.com/download/10m/cultural/ne_10m_admin_0_countries.zip"> Download Natrual Earth 1:10m Cultural Vector </a>
